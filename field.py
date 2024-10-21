@@ -11,8 +11,8 @@ class Field:
 
         self.visible_width = width
         self.visible_height = height
-        self.full_width = 1500
-        self.full_height = 1500
+        self.full_width = 10000
+        self.full_height = 10000
         self.draw_point = draw_point_coords
 
         self.center = Point((-self.full_width/2, -self.full_height/2))
