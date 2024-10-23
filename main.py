@@ -18,7 +18,7 @@ while run:
             if event.button == 1:
                 paint.left_mouse_was_pressed()
             elif event.button == 2:
-                paint.midlle_mouse_was_pressed()
+                paint.middle_mouse_was_pressed()
         if event.type == pygame.MOUSEMOTION:
             paint.mouse_was_moved()
         if event.type == pygame.MOUSEBUTTONUP:

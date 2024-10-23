@@ -1,7 +1,3 @@
-import pygame
-
-from button import Button
-from drawer import Drawer
 from field import Field
 from mouse import Mouse
 from point import Point
@@ -19,8 +15,7 @@ class Paint:
         self.is_moving = False
 
         self.mouse = Mouse()
-        self.drawer = Drawer(self.screen)
-        self.field = Field(self.drawer)
+        self.field = Field()
         self.toolbar = Toolbar(screen=self.screen)
     
     def left_mouse_was_pressed(self):
@@ -31,7 +26,7 @@ class Paint:
             self.is_drawing = True
             self.field.add_field_state()
 
-    def midlle_mouse_was_pressed(self):
+    def middle_mouse_was_pressed(self):
         if self.field.is_mouse_collided:
             self.is_moving = True
         
@@ -64,4 +59,4 @@ class Paint:
 
     def draw_starting_interface(self):
         self.toolbar.draw_starting_toolbar(self.screen)
-        self.field.draw_starting_state(self.screen)
+        self.field.update(self.screen)

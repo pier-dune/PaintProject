@@ -1,5 +1,3 @@
-import pygame
-
 from colors import *
 from drawer import Drawer, CircleDrawer, PenDrawer, RectDrawer
 from button import Button
